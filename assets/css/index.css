@@ -2,110 +2,105 @@
 @import url('/assets/css/global.css');
 
 .search__container {
-    margin: 40px 0;
-    display: flex;
+  margin: 40px 0;
+  display: flex;
 }
 
 .search__field {
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
-    background-color: transparent;
-    color: white;
-    padding: 16px;
-    margin-right: 40px;
-    width: calc(100% - 40px);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 16px;
+  color: white;
+  margin-right: 40px;
+  width: calc(100% - 40px);
 }
 
 .search__field::placeholder {
-    color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, .8);
 }
 
-.search__button {
-    padding: 16px 40px;
-    background-color: var(--primary-color);
-    color: var(--dark-color);
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color .1s ease-in-out;
-    font-weight: bold;
+.search__button{
+  padding: 16px 40px;
 }
 
-.search__button:hover {
-    background-color: var(--secondary-color);
-    color: black;
+.search__button, .search__button--mobile{
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.search__button:hover, .search__button--mobile:hover {
+  background-color: var(--secondary-color);
+}
+
+.search__button--mobile{
+  display: none;
 }
 
 .card__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .card {
-    width: calc(var(--container-size) / 4 - 32px);
-    height: calc(var(--card-size) + 70px);
-    border-radius: 9px;
-    position: relative;
+  width: calc(var(--container-size) / 4 - 32px);
+  height: calc(calc(var(--container-size) / 4 - 32px) + 70px);
+  border-radius: 9px;
+  position: relative;
+}
+
+.card:visited {
+  color: white;
 }
 
 .card__image {
-    width: 100%;
-    object-fit: contain;
-    padding: 8px;
-    box-sizing: border-box;
+  width: 100%;
+  object-fit: contain;
+  padding: 8px;
+  box-sizing: border-box;
 }
 
-.card__title {
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding: 24px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    border-radius: 0 0 8px 8px;
-    background-color: var(--card-title-background);
+.card__title { 
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 24px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  background-color: var(--card-title-background);
+  color: white;
 }
 
-.card.orange {
-    background-color: var(--orange);
+.card#charizard {
+  background-color: var(--charizard-color);
 }
 
-.card.green {
-    background-color: var(--green);
-}
-
-.card.yellow {
-    background-color: var(--yellow);
-}
-
-.card.purple {
-    background-color: var(--purple);
-}
-
-.card.pink {
-    background-color: var(--pink);
-}
 
 @media only screen and (max-width: 600px) {
-    .card__container {
-        justify-content: center;
-    }
+  .card__container {
+    justify-content: center;
+  }
 
-    .search__button--mobile {
-        display: initial;
-        padding: 8px 12px;
-    }
+  .search__button--mobile{
+    display: initial;
+    padding: 8px 12px;
+  }
 
-    .search__button {
-        display: none;
-    }
+  .search__button{
+    display: none;
+  }
 
-    .search__field {
-        margin-right: 12px;
-    }
+  .search__field{
+    margin-right: 12px;
+  }
 }

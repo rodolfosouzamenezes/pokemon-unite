@@ -1,56 +1,17 @@
-@import url('/assets/css/reset.css');
-@import url('/assets/css/global.css');
-
-.pokemon-color {
-    color: var(--pokemon-color);
-}
-
-h1 {
-    margin-bottom: 0px;
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 32px;
-    margin-bottom: 8px;
-}
+@import url('global.css');
+@import url('reset.css');
 
 .preview__container {
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 60px 0 100px;
-
-}
-
-.preview__pokemon {
-    width: 35%;
-    position: absolute;
-}
-
-.preview__pokemon::before {
-    content: " ";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    left: calc(75% - 180px);
-    top: calc(75% - 180px);
-    background: var(--pokemon-color);
-    filter: blur(100px);
-}
-
-.preview__image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    box-sizing: border-box;
     position: relative;
+    padding: 60px 0 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .preview__details {
-    background: linear-gradient(270deg, #242424 0%, rgba(36, 36, 36, 0) 95.6%);
+    background: linear-gradient(270deg, #242424 0%, transparent 100%);
     text-align: right;
     padding: 50px;
     border-radius: 8px;
@@ -60,14 +21,22 @@ h2 {
     align-items: flex-end;
 }
 
+.pokemon__color {
+    color: var(--pokemon-color);
+}
+
 .preview__level {
     font-size: 12px;
     text-transform: uppercase;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
 .preview__description {
     margin-top: 28px;
-    max-width: 650px;
+    max-width: 60%;
 }
 
 .preview__pills {
@@ -78,12 +47,35 @@ h2 {
 
 .preview__pill {
     border: 2px solid var(--pokemon-color);
-    border-radius: 39px;
+    border-radius: 40px;
     color: var(--pokemon-color);
     margin-left: 12px;
     padding: 12px 24px;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 14px;
+}
+
+.preview__pokemon {
+    width: 35%;
+    position: absolute;
+}
+
+.preview__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.preview__pokemon::before {
+    content: "";
+    background: var(--pokemon-color);
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 20%;
+    top: 20%;
+    filter: blur(100px);
 }
 
 .skills__container {
@@ -95,11 +87,14 @@ h2 {
     justify-content: center;
 }
 
-.skills__title {
+h2 {
+    font-weight: bold;
+    font-size: 32px;
     margin-bottom: 8px;
 }
 
-.skills__description {
+.skills__description,
+.evolutions__description {
     margin-bottom: 40px;
 }
 
@@ -112,6 +107,7 @@ h2 {
     border-radius: 8px;
     margin: 12px 0;
     padding: 24px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,11 +120,10 @@ h2 {
 .skills__progress {
     width: 50%;
     height: 10px;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .skills__progress::-webkit-progress-bar {
-    background: rgba(155, 155, 155, 0.21);
+    background: rgba(155, 155, 155, .2);
     border-radius: 10px;
 }
 
@@ -167,11 +162,12 @@ h2 {
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    background-color: var(--light-background);
     width: 100%;
+    background-color: var(--light-background);
     border-radius: 8px;
     padding: 8px 0;
 }
+
 
 @media only screen and (max-width: 600px) {
     .preview__container {
@@ -180,12 +176,17 @@ h2 {
 
     .preview__pokemon {
         position: relative;
-        margin-bottom: 36px;
         width: 75%;
+        top: 60px;
+    }
+
+    .preview__description {
+        max-width: 100%;
     }
 
     .preview__details {
-        width: initial;
+        width: auto;
+        background: linear-gradient(0deg, #242424 0%, transparent 100%);
     }
 
     .preview__pills {
@@ -198,5 +199,13 @@ h2 {
 
     .skills__description {
         text-align: center;
+    }
+
+    .evolutions__list {
+        flex-direction: column;
+    }
+
+    .evolutions__item {
+        margin: 0 80px;
     }
 }
