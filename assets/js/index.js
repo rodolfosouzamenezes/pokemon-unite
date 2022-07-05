@@ -17,3 +17,20 @@ function pokemon(item){
     </a>
     `;
 }
+
+function searchPokemon() {
+    let input = document.getElementById('search__field').value
+    input = input.toLowerCase();
+    let card = document.getElementsByClassName('card__title');
+      
+    for (i = 0; i < card.length; i++) { 
+        if (!card[i].innerHTML.toLowerCase().includes(input)) {
+            card[i].parentNode.style.display="none";
+        }
+        else {
+            card[i].parentNode.style.display="list-item";                 
+        }
+    }
+}
+
+
