@@ -96,6 +96,12 @@ h2 {
     top: -100px;
 }
 
+.logo-footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .footer__links {
     display: inline-block;
     color: white;
