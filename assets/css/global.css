@@ -159,6 +159,10 @@ h2 {
         margin-left: 24px;
     }
 
+    .logo-top {
+        width: 120px;
+    }
+
     .menu__item--active {
         margin: 30px 0px 20px 0px;
     }
