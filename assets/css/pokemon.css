@@ -187,21 +187,27 @@ h2 {
 @media only screen and (max-width: 600px) {
     .preview__container {
         flex-direction: column;
+        padding-top: 20px;
     }
 
     .preview__pokemon {
         position: relative;
-        width: 75%;
+        width: 65%;
         top: 60px;
     }
 
     .preview__description {
+        display: flex;
         max-width: 100%;
+        text-align: center;
     }
 
     .preview__details {
+        display: flex;
         width: auto;
         background: linear-gradient(0deg, #242424 0%, transparent 100%);
+        align-items: center;
+        margin-top: 30px;
     }
 
     .preview__pills {
@@ -222,5 +228,9 @@ h2 {
 
     .evolutions__item {
         margin: 0 80px;
+    }
+
+    .evolutions__description {
+        margin-bottom: 20px;
     }
 }
