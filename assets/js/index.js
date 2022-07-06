@@ -1,7 +1,7 @@
 loadPokemon();
 
 function loadPokemon(){
-    fetch('https://6283929f92a6a5e462260498.mockapi.io/pokemon')
+    fetch('https://6283929f92a6a5e462260498.mockapi.io/pokemons')
     .then(response => response.json())
     .then(data => {
         const pokemons = data.map((item) => pokemon(item))
