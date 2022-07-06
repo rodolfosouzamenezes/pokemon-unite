@@ -227,10 +227,91 @@ h2 {
     }
 
     .evolutions__item {
-        margin: 0 80px;
+        margin: 10px 0;
+        width: 100%;
     }
 
     .evolutions__description {
         margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .preview__details {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .preview__description {
+        font-size: 14px;
+    }
+
+    .preview__pill {
+        width: 100%;
+    }
+
+    .preview__pill {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .preview__pill:nth-child(1) {
+        margin-bottom: 2vw;
+    }
+}
+
+@media only screen and (max-width: 334px) {
+    h1 {
+        margin-top: 14px;
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .preview__container {
+        padding-bottom: 60px;
+    }
+
+    .preview__description {
+        margin-top: 18px;
+    }
+
+    .skills__container {
+        margin-top: 60px;
+    }
+
+    .skills__item {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .skills__description {
+        margin-bottom: 18px;
+    }
+
+    .skills__label {
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .skills__progress {
+        width: 100%;
+    }
+
+    .evolutions__description {
+        font-size: 15px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    .evolutions__list {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 14px;
     }
 }

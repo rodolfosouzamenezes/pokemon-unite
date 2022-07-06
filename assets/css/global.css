@@ -228,3 +228,37 @@ h2 {
     }
     
 }
+
+@media only screen and (max-width: 334px) {
+    .logo-top {
+        height: 40px;
+    }
+
+    body {
+        padding-top: 0px;
+    }
+
+    .container.menu__container {
+        padding: 24px;
+    }
+
+    .menu__logo {
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .logo-top {
+        display: none;
+    }
+
+    .footer__image {
+        height: 100px;
+    }
+
+    .footer__button {
+        margin-top: 50px;
+        width: 70%;
+        font-size: 13px;
+        text-align: center;
+    }
+}
