@@ -82,10 +82,10 @@ function loadEvolutions(pokemon) {
     }  else {
         const evolutions = pokemon.evolutions.map((evolution) => `
             <div class="evolutions__item">
-                <img src="/assets/images/evolution/${evolution.avatar}" alt="${evolution.name}" class="evolutions__image">
+                <img src="/assets/images/evolution/${((evolution.avatar).replace('+', '-')).replace('+', '-')}" alt="${evolution.name}" class="evolutions__image">
                 <div class="evolutions__details">
                     <p class="evolutions__name pokemon__color">${evolution.name}</p>
-                    <p class="evolutions__level">Nível ${evolution.level}</p>
+                    <p class="evolutions__level">${evolution.level === null ? '' : `Nível ${evolution.level}`}</p>
                 </div>
             </div>
         `)
