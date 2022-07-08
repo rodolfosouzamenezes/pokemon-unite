@@ -75,10 +75,7 @@ function characteristic(item){
 function loadEvolutions(pokemon) {
 
     if (pokemon.evolutions.length === 0) {
-        document.querySelector('.evolutions__container').innerHTML = `
-            <h2 class="pokemon__color">Evoluções</h2>
-            <p class="evolutions__description">Esse Pokémon não possui evoluções</p>
-        `
+        document.querySelector('.evolutions__container').innerHTML = '';
     }  else {
         const evolutions = pokemon.evolutions.map((evolution) => `
             <div class="evolutions__item">
