@@ -147,7 +147,48 @@ h2 {
     display: none;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 980px) {
+    .menu__link {
+        font-size: 14px
+    }
+
+    .menu__item--active {
+        padding: 15px;
+    }
+
+    .logo-top {
+        height: 6vh;
+        margin-left: 24px;
+    }
+}
+
+@media only screen and (max-width: 883px) {
+    .menu__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu__link {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .menu__item--active {
+        padding: 5px 15px;
+    }
+
+    .menu__item .menu__item--active {
+        align-items: center;
+    }
+
+    .logo-top {
+        height: 6vh;
+        margin-left: 24px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
     .menu {
         display: none;
     }
@@ -227,6 +268,12 @@ h2 {
         font-size: 14px;
     }
     
+}
+
+@media only screen and (max-width: 400px) {
+    .logo-top {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 334px) {
