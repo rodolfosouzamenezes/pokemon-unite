@@ -80,7 +80,7 @@ h2 {
     width: 180px;
     height: 180px;
     left: 20%;
-    top: 20%;
+    top: 30%;
     filter: blur(100px);
 }
 
@@ -183,4 +183,168 @@ h2 {
 .evolutions__level {
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 1064px) {  
+    h2 {
+        font-size: 32px;
+    }    
+    
+    .preview__container {
+        width: 100%;
+        padding: 6vw 0 8vw;
+    }    
+    
+    .preview__details {
+        padding: 4vw;
+        border-radius: 8px;
+    }      
+    
+    .preview__description {
+        margin-top: 2vw;
+        max-width: 52%;
+    }
+    
+    .preview__pills {
+        margin-top: 3vw;
+    }
+    
+    .preview__pill {
+        margin-left: 1vw;
+        padding: 1vw 2vw;
+    }
+    
+    .preview__pokemon {
+        width: 35vw;
+    }   
+}
+
+@media only screen and (max-width: 600px) {
+    .preview__container {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .preview__image {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .preview__pokemon {
+        position: relative;
+        width: 65%;
+        top: 60px;
+    }
+
+    .preview__description {
+        display: flex;
+        max-width: 100%;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    .preview__details {
+        display: flex;
+        width: auto;
+        background: linear-gradient(0deg, #242424 0%, transparent 100%);
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .preview__pills {
+        flex-wrap: wrap;
+    }
+
+    .preview__pill {
+        margin-bottom: 8px;
+    }
+
+    .skills__description {
+        text-align: center;
+    }
+
+    .evolutions__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evolutions__item {
+        margin: 10px 0;
+        width: 80vw;
+    }
+
+    .evolutions__description {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 334px) {
+   .preview__container {
+        padding-bottom: 60px;
+    }
+
+    .preview__description {
+        margin-top: 18px;
+    }
+
+    .skills__container {
+        margin-top: 60px;
+    }
+
+    .skills__item {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .skills__description {
+        margin-bottom: 18px;
+    }
+
+    .skills__label {
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .skills__progress {
+        width: 100%;
+    }
+
+    .evolutions__description {
+        font-size: 15px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    .evolutions__list {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .preview__details {
+        text-align: center;
+        padding: 30px;
+    }
+
+    .preview__description {
+        font-size: 14px;
+    }
+
+    .preview__pill {
+        width: 100%;
+    }
+
+    .preview__pill {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .preview__pill:nth-child(1) {
+        margin-bottom: 2vw;
+    }
 }
