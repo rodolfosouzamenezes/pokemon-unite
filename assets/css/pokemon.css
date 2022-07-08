@@ -1,5 +1,15 @@
-@import url('global.css');
 @import url('reset.css');
+@import url('global.css');
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 8px;
+}    
 
 .preview__container {
     display: flex;
@@ -8,7 +18,7 @@
     position: relative;
     padding: 60px 0 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+}    
 
 .preview__details {
     background: linear-gradient(270deg, #242424 0%, transparent 100%);
@@ -19,20 +29,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
+}    
 
 .pokemon__color {
     color: var(--pokemon-color);
-}
+}    
 
 .preview__level {
     font-size: 12px;
     text-transform: uppercase;
-}
-
-h1 {
-    margin-bottom: 0;
-}
+}    
 
 .preview__description {
     margin-top: 28px;
@@ -87,11 +93,6 @@ h1 {
     justify-content: center;
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 32px;
-    margin-bottom: 8px;
-}
 
 .skills__description,
 .evolutions__description {
@@ -182,136 +183,4 @@ h2 {
 .evolutions__level {
     margin-top: 8px;
     margin-bottom: 8px;
-}
-
-@media only screen and (max-width: 600px) {
-    .preview__container {
-        flex-direction: column;
-        padding-top: 20px;
-    }
-
-    .preview__pokemon {
-        position: relative;
-        width: 65%;
-        top: 60px;
-    }
-
-    .preview__description {
-        display: flex;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .preview__details {
-        display: flex;
-        width: auto;
-        background: linear-gradient(0deg, #242424 0%, transparent 100%);
-        align-items: center;
-        margin-top: 30px;
-    }
-
-    .preview__pills {
-        flex-wrap: wrap;
-    }
-
-    .preview__pill {
-        margin-bottom: 8px;
-    }
-
-    .skills__description {
-        text-align: center;
-    }
-
-    .evolutions__list {
-        flex-direction: column;
-    }
-
-    .evolutions__item {
-        margin: 10px 0;
-        width: 100%;
-    }
-
-    .evolutions__description {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 390px) {
-    .preview__details {
-        text-align: center;
-        padding: 30px;
-    }
-
-    .preview__description {
-        font-size: 14px;
-    }
-
-    .preview__pill {
-        width: 100%;
-    }
-
-    .preview__pill {
-        width: 100%;
-        margin: 0px;
-    }
-
-    .preview__pill:nth-child(1) {
-        margin-bottom: 2vw;
-    }
-}
-
-@media only screen and (max-width: 334px) {
-    h1 {
-        margin-top: 14px;
-        font-size: 30px;
-    }
-
-    .container {
-        padding: 0 20px;
-    }
-
-    .preview__container {
-        padding-bottom: 60px;
-    }
-
-    .preview__description {
-        margin-top: 18px;
-    }
-
-    .skills__container {
-        margin-top: 60px;
-    }
-
-    .skills__item {
-        flex-direction: column;
-        padding: 18px;
-    }
-
-    .skills__description {
-        margin-bottom: 18px;
-    }
-
-    .skills__label {
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
-
-    .skills__progress {
-        width: 100%;
-    }
-
-    .evolutions__description {
-        font-size: 15px;
-        margin-bottom: 0px;
-        text-align: center;
-    }
-
-    .evolutions__list {
-        margin-top: 20px;
-    }
-
-    h2 {
-        font-size: 20px;
-        margin-bottom: 14px;
-    }
 }
