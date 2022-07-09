@@ -65,6 +65,10 @@ h2 {
     padding: 16px 16px;
 }
 
+.menu__item:hover {
+    transform: scale(1.05);
+  }
+
 .menu__link {
     color: white;
     text-decoration: none;
